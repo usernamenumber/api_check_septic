@@ -2,7 +2,9 @@
 
 ## Premise
 
-This is a simple django API endpoint, which may or may not have been created as part of a job interview. The endpoint provides a generic way to check whether a given property, identified by an address and zip code, has a septic tank. It uses [the housecanary API](https://api-docs.housecanary.com) but is designed to make this easy to modify in a way that is transparent to users.
+This is a simple django API endpoint, which may or may not have been created as part of a job interview. The endpoint provides a generic way to check whether a given property, identified by an address and zip code, has a septic tank. It uses [the housecanary API](https://api-docs.housecanary.com) but is designed to make this easy to modify in a way that is transparent to users. 
+
+The API is mainly implemented in this [view](api_check_septic/views.py) and [helper](api_check_septic/utils.py), but the fanciest code is actually in the [tests](api_check_septic/tests.py).
 
 ## Assumptions
 
