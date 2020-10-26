@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
+
+# Treating this as a stand-in for an existing API into which the 
+# check_septic endpoint is to be integrated
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/v<int:api_version>/property/has_septic', include('api_check_septic.urls')),
 ]
